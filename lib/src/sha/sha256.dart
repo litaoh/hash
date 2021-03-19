@@ -8,9 +8,9 @@ class SHA256 extends BlockHash {
   int padLength = 64;
   @override
   int outSize = 32;
-  final List<int> _h = List<int>(8);
+  final List<int> _h = List.filled(8, 0);
   final List<int> _k = _sha256_K;
-  final List<int> _W = List<int>(64);
+  final List<int> _W = List.filled(64, 0);
 
   @override
   void reset() {

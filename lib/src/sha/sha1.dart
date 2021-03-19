@@ -10,8 +10,8 @@ class SHA1 extends BlockHash {
   int padLength = 64;
   @override
   int outSize = 20;
-  final List<int> _h = List<int>(5);
-  final List<int> _W = List<int>(80);
+  final List<int> _h = List.filled(5, 0);
+  final List<int> _W = List.filled(80, 0);
 
   @override
   void reset() {

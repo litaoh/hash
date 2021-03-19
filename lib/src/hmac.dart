@@ -2,9 +2,9 @@ part of hash;
 
 class Hmac {
   BlockHash hash;
-  int blockSize;
-  int outSize;
-  List<int> _key;
+  late int blockSize;
+  late int outSize;
+  List<int>? _key;
   Hmac(this.hash, List<int> key) {
     blockSize = hash.blockSize ~/ 8;
     outSize = hash.outSize;
@@ -48,6 +48,6 @@ class Hmac {
   Uint8List digest() {
     var ret = hash.digest();
     hash.reset();
-    return hash.update(_key).update(ret).digest();
+    return hash.update(_key!).update(ret).digest();
   }
 }

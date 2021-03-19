@@ -68,7 +68,7 @@ void main() {
   hashs.forEach((String type, BlockHash hash) {
     group('${type} encryption', () {
       var valid = valids[type];
-      for (var i = 0; i < valid.length; i += 2) {
+      for (var i = 0; i < valid!.length; i += 2) {
         test('${type}: ${valid[i]}', () {
           hash.reset();
           var ret = hash.update(valid[i].codeUnits).digest();

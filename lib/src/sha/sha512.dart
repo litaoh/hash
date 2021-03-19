@@ -8,9 +8,9 @@ class SHA512 extends BlockHash {
   int padLength = 128;
   @override
   int outSize = 64;
-  final List<int> _h = List<int>(16);
+  final List<int> _h = List.filled(16, 0);
   final List<int> _k = _sha512_K;
-  final List<int> _W = List<int>(160);
+  final List<int> _W = List.filled(160, 0);
 
   @override
   void reset() {

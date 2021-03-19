@@ -2,15 +2,15 @@ part of hash;
 
 /// An interface for cryptographic hash functions.
 class BlockHash {
-  List<int> pending;
+  late List<int>? pending;
   int pendingTotal = 0;
-  int blockSize;
-  int padLength;
-  int outSize;
+  late int blockSize;
+  late int padLength;
+  late int outSize;
   Endian endian = Endian.big;
 
-  int _delta8;
-  int _delta32;
+  late int _delta8;
+  late int _delta32;
   BlockHash() {
     padLength = padLength ~/ 8;
     _delta8 = blockSize ~/ 8;
@@ -32,13 +32,13 @@ class BlockHash {
     if (pending?.isEmpty ?? true) {
       pending = List.from(msg);
     } else {
-      pending.addAll(msg);
+      pending!.addAll(msg);
     }
     pendingTotal += msg.length;
 
     /// Enough data, try updating
-    if (pending.length >= _delta8) {
-      msg = pending;
+    if (pending!.length >= _delta8) {
+      msg = pending!;
 
       /// Process pending data in blocks
       var r = msg.length % _delta8;

@@ -11,7 +11,7 @@ class RIPEMD160 extends BlockHash {
   @override
   Endian endian = Endian.little;
 
-  final List<int> _h = List<int>(5);
+  final List<int> _h = List.filled(5, 0);
 
   @override
   void reset() {

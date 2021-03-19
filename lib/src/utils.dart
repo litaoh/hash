@@ -43,7 +43,7 @@ final List<int> _MASK32_HI_BITS = [
 List<int> _join32(List<int> msg, int start, int end, Endian endian) {
   var len = end - start;
   assert(len % 4 == 0);
-  var res = List<int>(len ~/ 4);
+  var res = List.filled((len ~/ 4), 0);
   for (var i = 0, k = start; i < res.length; i++, k += 4) {
     var w;
     if (endian == Endian.big) {
