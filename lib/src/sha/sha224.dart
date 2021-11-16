@@ -9,7 +9,7 @@ class SHA224 extends SHA256 {
   @override
   int outSize = 28;
   @override
-  final List<int> _h = List<int>(8);
+  final List<int> _h = List.filled(8, 0);
 
   @override
   void reset() {

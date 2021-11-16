@@ -9,7 +9,7 @@ class SHA384 extends SHA512 {
   @override
   int outSize = 48;
   @override
-  final List<int> _h = List<int>(16);
+  final List<int> _h = List.filled(16, 0);
 
   @override
   void reset() {

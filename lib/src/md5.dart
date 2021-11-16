@@ -33,7 +33,7 @@ class MD5 extends BlockHash {
   @override
   Endian endian = Endian.little;
 
-  final List<int> _h = List<int>(4);
+  final List<int> _h = List.filled(4, 0);
 
   @override
   void reset() {
