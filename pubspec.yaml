@@ -1,6 +1,6 @@
 name: hash
 description: A set of cryptographic hashing functions implemented in pure Dart
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/litaoh/hash
 
 environment:

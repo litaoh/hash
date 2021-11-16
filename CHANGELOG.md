@@ -1,5 +1,10 @@
-## 1.0.2
+## 1.0.4
+- Support dart version 2.12 and above
+
+## 1.0.3
 - [FIX] outSize
+
+## 1.0.2
 - [FIX] Hmac reset
 
 ## 1.0.1
